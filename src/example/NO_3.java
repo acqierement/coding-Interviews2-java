@@ -106,7 +106,7 @@ public class NO_3 {
 				}
 			}
 			if(count > mid-start+1) {
-				end = mid;
+				end = mid; 
 			}else {
 				start = mid + 1;
 			}
