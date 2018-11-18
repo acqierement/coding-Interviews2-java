@@ -1,6 +1,6 @@
 # 重建二叉树
 
-本题是通过前序遍历和中序遍历来重建二叉树，这类题都是通过将一个大的二叉树分解成一个个小的二叉树来实现的。
+本题是通过前序遍历和中序遍历来重建二叉树，这类题都是通过将一个大的二叉树分解成一个个小的二叉树来实现的。这题在LeetCode里面有，[construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/),可以去看看并且测试一下自己的代码。
 
 大体的思路就是先根据前序遍历的第一个数字确定根节点，然后在中序遍历中找到根节点的位置，中序遍历中根节点的左边就是左子树，根节点右边就是右子树。接着就是递归，在前序遍历中可以知道左子树的根节点，在中序遍历中可以知道左子树的左、右子树。右子树同理。
 

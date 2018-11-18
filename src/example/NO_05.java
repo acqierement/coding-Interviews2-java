@@ -7,7 +7,7 @@ package example;
  * Data: 2018年11月18日
  * Time: 下午3:08:49
  */
-public class NO_5 {
+public class NO_05 {
 	
 
 	public static String replaceBlank(StringBuffer str) {

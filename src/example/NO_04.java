@@ -10,7 +10,7 @@ package example;
  * 然后还要遍历i行和i列，而且矩形也不一定是正方形。所以总的来说和书中介绍的用右上角或左下角没有太大区别，用书上的方法还比较直观。
  * 以上都是我在挣扎过后得出的教训，结论就是还是书上的方法好啊
  */
-public class NO_4 {
+public class NO_04 {
 	public static boolean find(int[][] matrix, int number) {
 
 		if (matrix == null || matrix.length < 1 || matrix[0].length < 1) {

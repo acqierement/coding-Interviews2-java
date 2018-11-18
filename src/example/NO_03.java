@@ -10,7 +10,7 @@ import java.util.HashMap;
  * 题目一可以修改数组 duplicate()
  * 题目二不可以修改数组 getDuplicate()
  */
-public class NO_3 {
+public class NO_03 {
 
 	/**
 	 * 最简单和暴力的方法，给数组排序之后就可以很方便找出

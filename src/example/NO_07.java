@@ -1,6 +1,12 @@
 package example;
 
-public class NO_6 {
+/**
+ * 创建二叉树
+ * @author acqierement
+ * Data: 2018年11月18日
+ * Time: 下午10:49:57
+ */
+public class NO_07 {
 	public static TreeNode constructCore(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) throws Exception{
 		//递归中一些没必要的比较判断都会很影响效率，在数据量大的情况下
 		//下面空指针的判断就可以在输入参数前进行判断会比较好
@@ -16,7 +22,7 @@ public class NO_6 {
 			}
 		}
 		
-		if(rootIndex == inEnd && root.val != inorder[rootIndex] ) {
+		if(rootIndex == inStart && root.val != inorder[rootIndex] ) {
 			throw new Error("输入错误");
 		}
 		
