@@ -53,7 +53,7 @@ public class NO_02 {
 			
 		}
 		
-		private static Singleton3 instance = null;
+		private volatile static Singleton3 instance = null;
 		
 		public static Singleton3 getInstance() {
 			if (instance == null) {
