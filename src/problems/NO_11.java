@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 旋转数组的最小数字

@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 创建二叉树

@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 23.链表中环的入口节点

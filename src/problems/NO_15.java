@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 import java.util.BitSet;
 

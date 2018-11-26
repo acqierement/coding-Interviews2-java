@@ -1,4 +1,4 @@
-package example;import java.awt.Checkbox;
+package problems;import java.awt.Checkbox;
 
 /**
  * 机器人的运动范围

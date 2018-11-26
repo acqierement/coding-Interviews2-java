@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 中序遍历的下一个节点

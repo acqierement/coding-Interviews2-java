@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 打印从1到最大的n位数

@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 1.斐波那契数列

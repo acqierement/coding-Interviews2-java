@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 二维数组的查找

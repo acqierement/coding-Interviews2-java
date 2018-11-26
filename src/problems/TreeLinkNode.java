@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 public class TreeLinkNode {
     int val;

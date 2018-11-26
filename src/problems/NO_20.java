@@ -1,4 +1,4 @@
-package example;
+package problems;
 
 /**
  * 表示数值的字符串
