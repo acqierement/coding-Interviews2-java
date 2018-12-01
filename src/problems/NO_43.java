@@ -1,9 +1,10 @@
 package problems;
 
 /**
- * 1~n整数中
- * 
- * @author acqierement Data: 2018年11月30日 Time: 上午11:27:39
+ * 43.1~n整数中出现的次数
+ * @author acqierement 
+ * Data: 2018年11月30日
+ *  Time: 上午11:27:39
  */
 public class NO_43 {
 	// 一般最先想到的解法，其实这种题深究都是属于数学知识的范畴
