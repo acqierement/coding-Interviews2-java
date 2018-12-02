@@ -1,7 +1,9 @@
 package problems;
 
+import java.awt.Container;
+
 /**
- * 43.1~n整数中出现的次数
+ * 43.1~n整数中1出现的次数
  * @author acqierement 
  * Data: 2018年11月30日
  *  Time: 上午11:27:39
@@ -28,7 +30,7 @@ public class NO_43 {
 	}
 	
 	//比较巧妙的方法，具体看解题思路。
-	public int NumberOf1Between1AndN_Solution(int n) {
+	public static int NumberOf1Between1AndN_Solution(int n) {
 		int count = 0;
 		int i = 1;// 当前位
 		int current = 0, after = 0, before = 0;
@@ -50,6 +52,11 @@ public class NO_43 {
 			i = i * 10;
 		}
 		return count;
+	}
+	
+	public static void main(String[] args) {
+		int count = NumberOf1Between1AndN_Solution(221);
+		System.out.println(count);
 	}
 
 }
