@@ -2,13 +2,17 @@ package problems;
 
 /**
  * 53.在排序数组中查找数字
- * 这题的思路很有意思，不然这么简单的题就只会想到用最简单的方法做
+ * 这一题主要都是二分查找
+ * 题目一：数字在排序数组中出现的次数
+ * 题目二：0~n-1中缺失的数字
+ * 题目三：数组中数值和下标相等的元素
+ * 
  * @author acqierement
  * Data: 2018年12月3日
  * Time: 上午11:24:20
  */
 public class NO_53 {
-	// 主要用二分法来找到第一个k和最后一个k
+	// 题目一,主要用二分法来找到第一个k和最后一个k
 	public static int getNumberOfK(int [] array , int k) {
 		int count = 0;
 		int firstIndex = getFirstK(array, k, 0, array.length - 1);
@@ -61,8 +65,56 @@ public class NO_53 {
 		}
 		return getLastK(array, k, start, end);
 	}
+	
+	// 题目二
+	public static int getMissNumber(int[] arrays, int length) {
+		int left = 0, right = length - 1;
+		while(left <= right) {
+			int mid = (left + right)>>1;
+			if(arrays[mid] != mid) {
+				//判断当前是否是要找的缺失的那个数字
+				if(mid == 0 || arrays[mid - 1] == mid - 1) {
+					return mid;
+				}else {//往左边找
+					right = mid - 1;
+				}
+			}else {// 相等证明缺失的数字在右边
+				left = mid + 1;
+			}
+		}
+		
+		if(left == length) {// 不存在缺失的数据
+			return length;
+		}
+		
+		return -1;
+	}
+	
+	// 题目三
+	public static int getNumberSameAsIndex(int[] array) {
+		if(array == null || array.length <= 0) {
+			return -1;
+		}
+		int left = 0, right = array.length - 1;
+		while(left <= right) {
+			int mid = (right + left) >> 1;
+			if(array[mid] == mid) {
+				return mid;
+			}
+			if(array[mid] < mid) {
+				left = mid + 1;
+			}else {
+				right = mid - 1;
+			}
+		}
+		return -1;
+	}
 	public static void main(String[] args) {
-		int[] array = {1,2,3,3,3,3,4,5};
-		getNumberOfK(array, 3);
+//		int[] array = {1,2,3,3,3,3,4,5};
+//		int[] array = {1,2,3,4,5,6,7};
+		int[] array = {-3,-1,1,3,5};
+//		int num = getMissNumber(array, array.length);
+		int num = getNumberSameAsIndex(array);
+		System.out.println(num);
 	}
 }
