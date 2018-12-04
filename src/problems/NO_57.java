@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 57.和为s的数字
- * 题目一：和为s的两个数字
+ * 题目一：和为s的两个数字 LeetCode 167题
  * 题目二：和为s的连续正数序列
  * @author acqierement
  * Data: 2018年12月4日
