@@ -1,9 +1,8 @@
 package problems;
 
-import org.omg.CORBA.StringHolder;
 
 /**
- * 单例模式
+ * 01.单例模式
  * @author acqierement
  * Data: 2018年11月16日
  * Time: 下午8:40:40

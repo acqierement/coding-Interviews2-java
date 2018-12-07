@@ -1,12 +1,9 @@
 package problems;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
-
-import javax.xml.soap.Node;
 
 /**
  * 32.从上到下打印二叉树
