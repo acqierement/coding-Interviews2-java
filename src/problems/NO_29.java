@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * 29.顺时针打印矩阵
  * 参考 leetCode 54. Spiral Matrix
+ * 牛客：https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a
  * @author acqierement
  * Data: 2018年11月27日
  * Time: 下午4:10:06
@@ -14,7 +15,7 @@ public class NO_29 {
 	public ArrayList<Integer> printMatrix(int[][] matrix){
 		ArrayList<Integer> res = new ArrayList<>();
 		if(matrix == null || matrix.length == 0) {
-			return null;
+			return res;
 		}
 		
 		int rowStart = 0, rowEnd = matrix.length - 1, colStart = 0, colEnd = matrix[0].length - 1;

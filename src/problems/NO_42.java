@@ -3,6 +3,7 @@ package problems;
 /**
  * 42.连续子数组的最大和
  * LeetCode 53题
+ * 牛客：https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6
  * @author acqierement
  * Data: 2018年11月30日
  * Time: 上午10:33:14
@@ -23,7 +24,7 @@ public class NO_42 {
         return max;
     }
     
-    // 动态规划
+    // 动态规划，因为当前结果只和前一个变量有关，所以只需要一个变量保存就可以了，就像上面的curSum。不需要用动态规划。
     public int maxSubArrayDP(int[] nums) {
     	if(nums == null || nums.length <= 0) {
     		return 0;

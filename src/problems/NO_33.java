@@ -2,6 +2,7 @@ package problems;
 
 /**
  * 33.二叉搜索树的后序遍历序列
+ * 牛客： https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd
  * @author acqierement
  * Data: 2018年11月28日
  * Time: 下午2:44:02

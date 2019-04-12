@@ -5,6 +5,7 @@ import java.util.Stack;
 /**
  * 31.栈的压入和弹出，参考书上和LeetCode写了两个解法
  * LeetCode 946题
+ * 牛客：https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106
  * @author acqierement
  * Data: 2018年11月27日
  * Time: 下午8:03:36

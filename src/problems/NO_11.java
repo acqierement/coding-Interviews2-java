@@ -3,6 +3,7 @@ package problems;
 /**
  * 旋转数组的最小数字
  * 可以看看Leetcode 153和154题
+ * 牛客：https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba
  * 这里我只实现可以有重复数字的
  * @author acqierement
  * Data: 2018年11月20日

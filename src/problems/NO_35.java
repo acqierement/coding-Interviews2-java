@@ -2,6 +2,8 @@ package problems;
 
 /**
  * 35.复杂链表的复制
+ * 这题主要就是分三步
+ * 牛客：https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba
  * @author acqierement
  * Data: 2018年11月28日
  * Time: 下午5:01:50

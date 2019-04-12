@@ -6,7 +6,9 @@ import java.util.List;
 /**
  * 57.和为s的数字
  * 题目一：和为s的两个数字 LeetCode 167题
+ * 牛客：https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b?tpId=13&tqId=11195&tPage=3
  * 题目二：和为s的连续正数序列
+ * 牛客：https://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe?tpId=13&tqId=11194&tPage=3
  * @author acqierement
  * Data: 2018年12月4日
  * Time: 下午6:52:07

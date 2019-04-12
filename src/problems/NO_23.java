@@ -3,33 +3,18 @@ package problems;
 /**
  * 23.链表中环的入口节点
  * 参考LeetCode 141题 Linked List Cycle
+ * 牛客：https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4?tpId=13&tqId=11208
  * @author acqierement
  * Data: 2018年11月26日
  * Time: 下午4:06:42
  */
 public class NO_23 {
 
-	//判断是否有环，如果有，返回环内任意一个节点，如果没有，返回null
-	public ListNode meetingNode(ListNode head) {
-		if(head == null) {
-			return null;
-		}
-		ListNode fakeHead = new ListNode(0);
-		fakeHead.next = head;
-		ListNode slow = fakeHead;
-		ListNode fast = head;
-		while(slow != fast) {
-			if(fast == null || fast.next == null) {
-				return null;
-			}
-			slow = slow.next;
-			fast = fast.next.next;
-		}
-		return slow;
-	}
-	
+	// 如果存在环，则从环中的任意一个节点找到入口节点
 	public ListNode entryNodeOfLoop(ListNode head) {
+		
 		ListNode meetingNode = meetingNode(head);
+		// 不存在环
 		if(meetingNode == null) {
 			return null;
 		}
@@ -55,5 +40,24 @@ public class NO_23 {
 			pNode2 = pNode2.next;
 		}
 		return pNode1;
+	}
+	
+	//判断是否有环，如果有，返回环内任意一个节点，如果没有，返回null
+	public ListNode meetingNode(ListNode head) {
+		if(head == null) {
+			return null;
+		}
+		ListNode fakeHead = new ListNode(0);
+		fakeHead.next = head;
+		ListNode slow = fakeHead;
+		ListNode fast = head;
+		while(slow != fast) {
+			if(fast == null || fast.next == null) {
+				return null;
+			}
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
 	}
 }

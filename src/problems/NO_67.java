@@ -2,6 +2,8 @@ package problems;
 
 /**
  * 67.把字符串转换成整数
+ * 牛客：https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202
+ * LeetCode：8. String to Integer (atoi) LeetCode的题目不一样 输入"4193 with words" 会输出 4193，但是牛客会输出0
  * @author acqierement
  * Data: 2018年12月6日
  * Time: 下午8:11:55

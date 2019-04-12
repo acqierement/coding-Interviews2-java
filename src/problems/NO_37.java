@@ -7,6 +7,7 @@ import java.util.Queue;
 /**
  * 37.序列化二叉树
  * 参考LeetCode 297题
+ * 牛客：https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214
  * @author acqierement 
  * Data: 2018年11月29日 
  * Time: 上午11:30:01

@@ -44,7 +44,7 @@ public class NO_17 {
 		while(index < number.length && number[index] == '0') {
 				index++;
 		}
-		//都是0的时候，因为我们从1开始打印
+		//开头的0不用打印
 		if(index == number.length)
 			return;
 		for(int i = index; i < number.length; i++) {

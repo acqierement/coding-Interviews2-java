@@ -6,8 +6,10 @@ import java.util.HashMap;
 /*
  * 长度为n的数组里面的数字范围都是从0~n-1范围的，找出数组中任意一个重复的数字
  * 利用这个条件可以找到类似桶排序的比较好的解法
- * 
+ *
  * 题目一可以修改数组 duplicate()
+ * 牛客：https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&tqId=11203
+ *
  * 题目二不可以修改数组 getDuplicate()
  */
 public class NO_03 {
@@ -75,7 +77,7 @@ public class NO_03 {
 					return true;
 				}
 //				交换，原本的错误做法，因为numbers[i]在过程中改变了
-//				到头来连交换都没写好
+//				到头来连交换都没写好。原来错误的做法：
 //				int temp = numbers[i];
 //				numbers[i] = numbers[numbers[i]];
 //				numbers[numbers[i]] = temp;
@@ -88,6 +90,7 @@ public class NO_03 {
 		return false;
 	}
 	
+// 题目二：不修改数组	
 //	这里题目原本是n+1个数字，1~n，我实现的和前面一样，n个数字，0~n-2;
 	public static int getDuplication(int[] numbers, int length) {
 		if(numbers == null || length <= 0) {

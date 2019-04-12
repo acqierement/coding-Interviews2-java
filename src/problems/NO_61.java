@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * 61.扑克牌中的顺子
+ * 牛客：https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4?tpId=13&tqId=11198&tPage=3
+ * 大小王可以当成任意数，所以主要是处理大小王
  * @author acqierement
  * Data: 2018年12月5日
  * Time: 下午12:41:09

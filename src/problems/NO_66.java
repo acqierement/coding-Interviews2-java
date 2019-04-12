@@ -3,6 +3,7 @@ package problems;
 
 /**
  * 66.构建乘积数组
+ * 牛客：https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&tqId=11204
  * @author acqierement
  * Data: 2018年12月6日
  * Time: 下午4:31:36

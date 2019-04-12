@@ -2,7 +2,8 @@ package problems;
 
 /**
  * 39.数组中出现次数超过一半的数字
- * 书上有两种解法，这里只实现了第二种
+ * 书上有两种解法，第一种方法其实就是找最小（或者最大）的k个数（使用快排的思路），这里k等于一半，由于后面会用到，这里不再实现。所以这里用第二种方法实现一下
+ * 牛客：https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163
  * @author acqierement
  * Data: 2018年11月29日
  * Time: 下午6:12:12
@@ -18,7 +19,7 @@ public class NO_39 {
 	遇到相同元素，count++;
 	遇到不相同元素，即为敌人，同归于尽,count--；当遇到count为0的情况，又以新的i值作为守阵地的士兵，
 	继续下去，到最后还留在阵地上的士兵，有可能是主元素。
-	再加一次循环，记录这个士兵的个数看是否大于数组一般即可。
+	最后验证一下这个数的次数是否大于数组一半即可。
 	 */
     public int MoreThanHalfNum_Solution(int [] array) {
         if(array == null || array.length <= 0) {
@@ -51,6 +52,6 @@ public class NO_39 {
 				count++;
 			}
 		}
-		return count > array.length/2 ? true : false;
+		return count > array.length / 2;
 	}
 }

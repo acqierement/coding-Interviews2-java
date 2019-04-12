@@ -2,6 +2,8 @@ package problems;
 
 /**
  * 数值的整数次方
+ * 这题牛客的判断不严，不需要考虑Integer.MIN_VALUE的问题
+ * 牛客：https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00
  * @author acqierement
  * Data: 2018年11月23日
  * Time: 下午7:13:07

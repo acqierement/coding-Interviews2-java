@@ -8,8 +8,11 @@ import java.util.Stack;
 /**
  * 32.从上到下打印二叉树
  * 这里只实现了分行打印二叉树和之字形打印二叉树
- * 参考LeetCode 102题-从上到下打印； 107题-从下到上打印
- * 
+ * 参考LeetCode 102题-从上到下打印； 107题-从下到上打印 103题-之字形打印二叉树
+ * 从上到下打印
+ * 牛客：https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&tqId=11213
+ * 之字形打印
+ * 牛客：https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212
  * @author acqierement
  * Data: 2018年11月28日
  * Time: 上午9:33:12
@@ -89,8 +92,6 @@ public class NO_32 {
     					stack2.add(curNode.right);
     				}
     			}
-    			isLeftToRight = !isLeftToRight;
-    			res.add(subList);
     		}else {
     			List<Integer> subList = new LinkedList<>();
     			while(!stack2.isEmpty()) {
@@ -103,9 +104,9 @@ public class NO_32 {
     					stack1.add(curNode.left);
     				}
     			}
-    			isLeftToRight = !isLeftToRight;
-    			res.add(subList);
     		}
+			isLeftToRight = !isLeftToRight;
+    		res.add(subList);
     	}
     	return res;
     }

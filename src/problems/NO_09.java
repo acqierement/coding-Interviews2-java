@@ -6,6 +6,7 @@ import java.util.Stack;
 
 /**
  * 用两个栈模拟一个队列的操作
+ * 牛客用两个栈模拟一个队列：https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6
  * 还有用两个队列模拟一个栈的操作
  * @author acqierement
  * Data: 2018年11月20日

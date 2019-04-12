@@ -4,6 +4,7 @@ package problems;
 /**
  * 50.第一个只出现一次的字符
  * 题目一：字符串中只出现一次的字符 
+ * 牛客：https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c
  * 题目二：字符流中只出现一次的字符
  * @author acqierement 
  * Data: 2018年12月2日 

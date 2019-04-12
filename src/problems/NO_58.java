@@ -3,8 +3,11 @@ package problems;
 /**
  * 58.翻转字符串  java使用stringBuilder处理这些字符串的题目比较简单
  * 题目一：翻转单词顺序
+ * 牛客：https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3?tpId=13&tqId=11197&tPage=3
  * 题目二：左旋转字符串
- * 相关LeetCode 344. Reverse String 557. Reverse Words in a String III
+ * 牛客：https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec?tpId=13&tqId=11196&tPage=3
+ * 相关LeetCode 344. Reverse String 
+ * 557. Reverse Words in a String III
  * @author acqierement
  * Data: 2018年12月4日
  * Time: 下午8:01:54

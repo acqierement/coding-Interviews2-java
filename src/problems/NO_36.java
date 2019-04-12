@@ -2,6 +2,7 @@ package problems;
 
 /**
  * 36.二叉搜索树与双向链表
+ * 牛客：https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5
  * @author acqierement
  * Data: 2018年11月29日
  * Time: 上午9:52:10
@@ -10,7 +11,7 @@ public class NO_36 {
 	//定义个变量，保存上一个节点
 	private TreeNode prev;
     public TreeNode Convert(TreeNode root) {
-    	if(root == null) {//如果不判断，下面dummy.right.left = null会报错
+    	if(root == null) {//如果不判断，dummy.right等于null下面dummy.right.left = null会报错
     		return null;
     	}
     	TreeNode dummy = new TreeNode(0);

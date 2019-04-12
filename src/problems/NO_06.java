@@ -3,6 +3,7 @@ package problems;
 import java.util.Stack;
 /**
  * 从尾到头打印链表的值
+ * 牛客：https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035
  * @author acqierement
  * Data: 2018年11月16日
  * Time: 下午7:47:46

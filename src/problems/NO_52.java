@@ -2,6 +2,7 @@ package problems;
 
 /**
  * 52.两个链表的第一个公共节点
+ * 牛客：https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46
  * @author acqierement
  * Data: 2018年12月3日
  * Time: 上午10:52:00
