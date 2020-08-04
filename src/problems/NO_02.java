@@ -27,7 +27,7 @@ public class NO_02 {
 		
 	}
 	/*
-	 * 不好的解法二：线程安全，但效率不高
+	 * 不好的解法二：线程相对安全，可能存在指令重排的情况，而且效率不高
 	 * 在前面的基础上加了synchronized，但是每次调用getinstance都要有加锁的操作。
 	 */
 	public static class Singleton2{
