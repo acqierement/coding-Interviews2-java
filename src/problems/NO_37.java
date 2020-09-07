@@ -8,13 +8,15 @@ import java.util.Queue;
  * 37.序列化二叉树
  * 参考LeetCode 297题
  * 牛客：https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214
- * @author acqierement 
- * Data: 2018年11月29日 
+ * @author acqierement
+ * Data: 2018年11月29日
  * Time: 上午11:30:01
  */
 public class NO_37 {
 	private static final String SPLITER = ",";
 	private static final String NULLCODE = "#";
+
+	// 结题思路其实就是使用前序遍历，不同的是一般前序遍历，没有null值，在这里，需要把null值加进去
 	public static String Serialize(TreeNode root) {
 		StringBuilder sb = new StringBuilder();
 		bulidString(root, sb);
@@ -27,12 +29,13 @@ public class NO_37 {
 		}else {
 			sb.append(String.valueOf(root.val)).append(SPLITER);
 			bulidString(root.left, sb);
-			bulidString(root.right, sb);		
+			bulidString(root.right, sb);
 		}
 	}
 
 	public  static TreeNode Deserialize(String str) {
 		String[] strArrays = str.split(SPLITER);
+
 		Queue<String> queue = new LinkedList<>();
 		queue.addAll(Arrays.asList(strArrays));
 		return buildTree(queue);
