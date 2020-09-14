@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import java.util.Collections;
+import java.util.List;
 
 /**
  * 38.字符串的排列
- * leetcode 46. Permutations 
+ * leetcode 46. Permutations
  * 牛客网的测试用例 会有 aa 这样重复的数据，不能用我这里的代码，因为我代码是基于交换的，所以结果会有aa和aa，不符合牛客网的例子。
- * 牛客：https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7 
+ * 牛客：https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7
  * @author acqierement
  * Data: 2018年11月29日
  * Time: 下午3:03:28
@@ -22,7 +23,7 @@ public class NO_38 {
         helper(res, nums, 0);
         return res;
     }
-    
+
     public void helper( List<List<Integer>> res, int[] nums, int pos) {
         if (pos >= nums.length) {
             res.add(construct(nums));
@@ -37,7 +38,7 @@ public class NO_38 {
             swap(nums, pos, i);
         }
     }
-    
+
     public List<Integer> construct(int[] nums) {
         List<Integer> list = new ArrayList<>();
         for (int n : nums) {
@@ -45,7 +46,7 @@ public class NO_38 {
         }
         return list;
     }
-    
+
     public void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];

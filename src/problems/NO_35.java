@@ -9,51 +9,47 @@ package problems;
  * Time: 下午5:01:50
  */
 public class NO_35 {
-    public static RandomListNode Clone(RandomListNode pHead){
-        cloneNode(pHead);
-        connectSiblingNodes(pHead);
-        return reconnectNodes(pHead);
-    }
-    
-    private static void cloneNode(RandomListNode pHead) {
-    	RandomListNode cur = pHead;
-    	RandomListNode clone;
-    	while(cur != null) {
-    		RandomListNode nextTemp = cur.next;
-    		clone = new RandomListNode(cur.label);
-    		cur.next = clone;
-    		clone.next = nextTemp;
-    		cur = nextTemp;
-    	}
-    }
-    
-    private static void connectSiblingNodes(RandomListNode pHead) {
-    	while(pHead != null) {
-    		RandomListNode pClone = pHead.next;
-    		pClone.random = pHead.random == null ? null : pHead.random.next;
-    		pHead = pClone.next;
-    	}
+    public static RandomListNode Clone(RandomListNode head){
+		// 给每一个节点复制一个兄弟节点，排在当前节点后面
+		copySiblingNode(head);
+		// 给复制的节点设置random
+		connectRandom(head);
+		// 拆分两个节点
+		return split(head);
     }
 
-	private static RandomListNode reconnectNodes(RandomListNode pHead) {
-        if(pHead == null) return pHead;
-		RandomListNode curHead = pHead;
-		RandomListNode cloneHead = pHead.next;
-		RandomListNode curClone = pHead.next;
-		while(curHead != null) {
-			curHead.next = curClone.next;
-			curHead = curHead.next;
-			if(curHead == null) {
-				curClone.next = null;
-				break;
-			}
-			curClone.next = curHead.next;
-			curClone = curClone.next;
+	public static void copySiblingNode(RandomListNode node) {
+		while (node != null) {
+			RandomListNode nextTemp = node.next;
+			RandomListNode copyNode = new RandomListNode(node.val);
+			node.next = copyNode;
+			copyNode.next = nextTemp;
+			node = nextTemp;
 		}
-		return cloneHead;
 	}
-    
-	
+
+	public static void connectRandom(RandomListNode node) {
+		while (node != null) {
+			node.next.random = node.random == null ? null : node.random.next;
+			node = node.next.next;
+		}
+	}
+
+	public static RandomListNode split(RandomListNode node) {
+		if (node == null) {
+			return null;
+		}
+		RandomListNode copyHead = node.next;
+		while (node != null) {
+			RandomListNode copyNode = node.next;
+			node.next = node.next.next;
+			copyNode.next = copyNode.next == null ? null : copyNode.next.next;
+			node = node.next;
+		}
+		return copyHead;
+	}
+
+
 	public static void main(String[] args) {
 		RandomListNode root = new RandomListNode(1);
 		RandomListNode root2 = new RandomListNode(2);
@@ -67,15 +63,11 @@ public class NO_35 {
 		RandomListNode cur = root;
 //		cloneNode(root);
 		RandomListNode clone = Clone(root);
-//		
-//		while(cur != null) {
-//			System.out.println(cur.label);
-//			cur = cur.random;
-//		}
 		while(clone != null) {
-			System.out.println(clone.label);
+			System.out.println(clone.val);
 			clone = clone.next;
 		}
 	}
+
 
 }

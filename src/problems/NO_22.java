@@ -11,7 +11,7 @@ import javax.print.attribute.ResolutionSyntax;
  * Time: 上午10:27:38
  */
 public class NO_22 {
-	
+
 	//找到倒数第K个节点
 	public static ListNode findKthToTail(ListNode head, int k) {
 		if(head == null || k <= 0) {
@@ -33,12 +33,12 @@ public class NO_22 {
 		}
 		return pBehind;
 	}
-	
+
 
 	public static void main(String[] args) {
 		int[] array = {1,2,3,4,5,6,7};
 		ListNode head = ListUtil.contruct(array);
-		ListNode headAfterDel = deleteKthTotail(head, 10);
+		ListNode headAfterDel = findKthToTail(head, 10);
 		ListUtil.travel(headAfterDel);
 	}
 }

@@ -7,11 +7,11 @@ package problems;
  * Time: 下午5:21:15
  */
 public class RandomListNode {
-    int label;
+    int val;
     RandomListNode next = null;
     RandomListNode random = null;
 
     RandomListNode(int label) {
-        this.label = label;
+        this.val = label;
     }
 }

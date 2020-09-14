@@ -26,13 +26,13 @@ public class NO_32 {
 		 if (root == null) {
 			return res;
 		 }
-		 
+
 		 queue.add(root);
 		 while(!queue.isEmpty()){
 			 int levelNum = queue.size();
 			 List<Integer> subList = new LinkedList<>();
 			 for(int i = 0; i < levelNum; i++) {
-				 TreeNode curNode = queue.poll();				 
+				 TreeNode curNode = queue.poll();
 				 if(curNode.left != null) {
 					 queue.add(curNode.left);
 				 }
@@ -46,14 +46,14 @@ public class NO_32 {
 		 }
 		 return res;
 	 }
-	 
+
 	 //分层打印二叉树，深度优先
 	 public List<List<Integer>> levelOrderDFS(TreeNode root) {
 		 List<List<Integer>> res = new LinkedList<>();
 		 levelHelper(res, root, 0);
 		 return res;
 	 }
-	 
+
 	private void levelHelper(List<List<Integer>> res, TreeNode root, int level) {
 		if (root == null) {
 			return;
@@ -67,20 +67,21 @@ public class NO_32 {
 		//res.get(res.size()-level-1).add(root.val);从下往上打印的时候，获得每一层也要相应改变
 		res.get(level).add(root.val);
 	}
-	
+
 	//使用书上的方法，使用两个栈，定义一个变量isLeftToRight来判断打印的顺序
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
     	Stack<TreeNode> stack1 = new Stack<>();
     	Stack<TreeNode> stack2 = new Stack<>();
     	List<List<Integer>> res = new LinkedList<>();
         if(root == null) {
-        	return res;        	
+        	return res;
         }
     	boolean isLeftToRight = true;
     	stack1.add(root);
     	while(!stack1.isEmpty() || !stack2.isEmpty()) {
+			List<Integer> subList;
     		if(isLeftToRight) {//当前打印的顺序是从左到右
-    			List<Integer> subList = new LinkedList<>();
+				subList = new LinkedList<>();
     			while(!stack1.isEmpty()) {
     				TreeNode curNode = stack1.pop();
     				subList.add(curNode.val);
@@ -93,7 +94,7 @@ public class NO_32 {
     				}
     			}
     		}else {
-    			List<Integer> subList = new LinkedList<>();
+    			subList = new LinkedList<>();
     			while(!stack2.isEmpty()) {
     				TreeNode curNode = stack2.pop();
     				subList.add(curNode.val);
@@ -110,7 +111,7 @@ public class NO_32 {
     	}
     	return res;
     }
-    
+
     // 使用一个队列实现，书上说使用一个栈是无法实现的，其实确实是如此。
     // 这里其实是用队列来实现树的层级遍历，然后在返回值的时候用LinkedList的addFirst()方法来实现逆序。所以本质上就是层次遍历
     public static List<List<Integer>> zigzagLevelOrderByQueue(TreeNode root) {

@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
  */
 public class NO_40 {
 	// 使用最大堆的方法
-    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+    public ArrayList<Integer> GetLeastNumbers_Solution1(int [] input, int k) {
     	ArrayList<Integer> res = new ArrayList<>();
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, new Comparator<Integer>() {
         	@Override
@@ -35,9 +35,9 @@ public class NO_40 {
         }
         return res;
     }
-	
+
 	// 使用快排剪枝的方法
-	public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+	public ArrayList<Integer> GetLeastNumbers_Solution2(int[] input, int k) {
         ArrayList<Integer> res = new ArrayList<>();
         findMinK(input, 0, input.length - 1, k);
         if (k > input.length) return res;
@@ -46,7 +46,7 @@ public class NO_40 {
         }
         return res;
     }
-    
+
     public void findMinK(int[] input,int start, int end, int k) {
         if (start >= end) return;
         int pos = partition(input, start, end);
@@ -56,7 +56,7 @@ public class NO_40 {
             findMinK(input, start, pos - 1, k);
         }
     }
-    
+
     public int partition(int[] input, int start, int end) {
         int povit = input[end];
         while (start < end) {
