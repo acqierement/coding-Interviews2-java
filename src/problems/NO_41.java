@@ -14,26 +14,24 @@ import java.util.PriorityQueue;
 public class NO_41 {
 	private PriorityQueue<Integer> min = new PriorityQueue<>();
 	private PriorityQueue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
-	private boolean isEven = true;
     public void Insert(Integer num) {
-        if (isEven) {
+        if (max.size() == min.size()) {
 			max.offer(num);
 			min.offer(max.poll());
 		}else {
 			min.offer(num);
 			max.offer(min.poll());
 		}
-        isEven = !isEven;
     }
 
     public Double GetMedian() {
-        if(isEven) {
+        if(max.size() == min.size()) {
         	return (min.peek() - max.peek())/2.0 + max.peek();
         }else {
         	return (double)min.peek();
         }
     }
-    
+
     public static void main(String[] args) {
 
 
