@@ -2,44 +2,41 @@ package problems;
 
 /**
  * 33.二叉搜索树的后序遍历序列
+ * 力扣：https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/submissions/
  * 牛客： https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd
  * @author acqierement
  * Data: 2018年11月28日
  * Time: 下午2:44:02
  */
 public class NO_33 {
-	
-	public boolean verifySquenceOfBST(int [] sequence) {
-		return verifySquenceOfBST(sequence, 0, sequence.length-1);
-    }
 
-	private boolean verifySquenceOfBST(int[] sequence, int start, int end) {
-		if(sequence == null || sequence.length == 0) {
-			return false;
+	/**
+	 * 后续遍历，你可以知道根节点，
+	 * 判断条件是：左子树的值都比根节点小，右子树的值都比根节点大，并且左右子树都是二叉搜索树
+	 * @param postorder
+	 * @return
+	 */
+	public boolean verifyPostorder(int[] postorder) {
+		return verifyPostorder(postorder, 0, postorder.length - 1);
+	}
+
+	public boolean verifyPostorder(int[] postorder, int s, int e) {
+		if (s >= e) {
+			return true;
 		}
-		int root = sequence[end];
-		int index = start;
-		//找到左子树和右子树的区分位置
-		for(; index < end; index++) {
-			if(sequence[index] > root) {
-				break;
-			}
+		int root = postorder[e];
+		int index = s;
+		// 找到左右子树的分界点
+		while (postorder[index] < root) {
+			index++;
 		}
-		//右子树都要比根节点大
-		for(int i = index; i < end; i++) {
-			if(sequence[i] < root) {
+		// 判断右子树是不是都大于根节点，不是的话返回false;
+		for (int i = index; i < e; i++) {
+			if (postorder[i] < root) {
 				return false;
 			}
 		}
-		
-		boolean verifyLeft = true;
-		boolean verifyRight = true;
-		if(index > start) {//存在左子树的话，判断左子树是不是二叉搜索树
-			verifyLeft = verifySquenceOfBST(sequence, start, index - 1);
-		}
-		if(index < end) {//存在右子树的话，判断右子树是不是二叉搜索树
-			verifyRight = verifySquenceOfBST(sequence, index, end - 1);
-		}
-		return (verifyLeft && verifyRight);
+		// 验证左右子树是不是都满足后续遍历
+		return verifyPostorder(postorder, s, index - 1) && verifyPostorder(postorder, index, e - 1);
 	}
 }
