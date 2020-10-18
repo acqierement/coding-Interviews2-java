@@ -13,7 +13,7 @@ public class NO_39 {
 	 * 作者：cm问前程
 	链接：https://www.nowcoder.com/questionTerminal/e8a1b01a2df14cb2b228b30ee6a92163
 	来源：牛客网
-	
+
 	采用阵地攻守的思想：
 	第一个数字作为第一个士兵，守阵地；count = 1；
 	遇到相同元素，count++;
@@ -25,19 +25,12 @@ public class NO_39 {
         if(array == null || array.length <= 0) {
         	return 0;
         }
-        int res = array[0];
-        int times = 1;
-        for (int num : array) {
-			if(times == 0) {
+		int res = 0, times = 0;
+		for (int num : array) {
+			if (times == 0) {
 				res = num;
-				times = 1;
-			}else {
-				if(res == num) {
-					times++;
-				}else {
-					times--;
-				}
 			}
+			times += res == num ? 1 : -1;
 		}
         if(!cheakMoreThanHalf(array,res)) {
         	return 0;
